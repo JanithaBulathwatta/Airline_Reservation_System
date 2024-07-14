@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AircraftController;
 use App\Http\Controllers\FlightmasterController;
 use App\Http\Controllers\PassengerController;
 use App\Models\Flightmaster;
@@ -20,3 +21,9 @@ Route::post('/flightMaster/store',[FlightmasterController::class,'store'])->name
 Route::get('/flightMaster/delete/{id}',[FlightmasterController::class,'destroy'])->name('destroy');
 Route::get('/flightMaster/update/{id}',[FlightmasterController::class,'edit'])->name('flightMaster.load');
 Route::post('/flightMaster/update/{id}',[FlightmasterController::class,'update'])->name('Update.Master');
+
+Route::get('/airCraft',[AircraftController::class,'index'])->name('loadairCraft');
+Route::post('/airCraft/store',[AircraftController::class,'store'])->name('storeAirCraft');
+Route::get('/airCraft/delete/{id}',[AircraftController::class,'destroy'])->name('deleteAir');
+Route::get('/airCraft/update/{id}',[AircraftController::class,'edit'])->name('airCraft.load');
+Route::post('/airCraft/updated/{id}',[AircraftController::class,'update'])->name('Update.airCraft');

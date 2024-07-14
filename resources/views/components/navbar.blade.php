@@ -17,7 +17,7 @@
 
                 <li><a href="{{ route('home') }}" class="{{ request()->path() == '/' ? 'active':'' }}">Passenger</a> </li>
                 <li><a href="{{ route('flightMaster') }}" class="{{ request()->path() == 'flightMaster' ? 'active':'' }}">Flight Master</a></li>
-                <li><a href="">Air Craft</a></li>
+                <li><a href="{{ route('loadairCraft') }}" class="{{ request()->path() == 'airCraft' ? 'active':'' }}">Air Craft</a></li>
                 <li><a href="">Flight Transaction</a></li>
                 <li><a href="">Cancellaration</a></li>
                 <li><a href="">ManifStaion</a></li>
