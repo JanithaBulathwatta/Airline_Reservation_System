@@ -13,4 +13,8 @@ class Passenge extends Model
     protected $fillable = [
         'name','age','gender','mobile'
     ];
+
+    public function flighttransactions(){
+        return $this->hasMany('app\Models\Flighttransaction','passenger_id');
+    }
 }

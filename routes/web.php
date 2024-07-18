@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AircraftController;
 use App\Http\Controllers\FlightmasterController;
+use App\Http\Controllers\FlighttransactionController;
 use App\Http\Controllers\PassengerController;
 use App\Models\Flightmaster;
 use Illuminate\Support\Facades\Route;
@@ -27,3 +28,5 @@ Route::post('/airCraft/store',[AircraftController::class,'store'])->name('storeA
 Route::get('/airCraft/delete/{id}',[AircraftController::class,'destroy'])->name('deleteAir');
 Route::get('/airCraft/update/{id}',[AircraftController::class,'edit'])->name('airCraft.load');
 Route::post('/airCraft/updated/{id}',[AircraftController::class,'update'])->name('Update.airCraft');
+
+Route::get('/flightTransaction',[FlighttransactionController::class,'index'])->name('loadTransaction');

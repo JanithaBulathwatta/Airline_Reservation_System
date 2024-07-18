@@ -13,4 +13,9 @@ class Flightmaster extends Model
     protected $fillable = [
         'departureCity','arrivalCity','departureTime','arrivalTime'
     ];
+
+    public function flighttransactions(){
+
+        return $this->hasMany('app\Models\Flighttransaction','flightmaster_id');
+    }
 }

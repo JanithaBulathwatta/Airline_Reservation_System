@@ -13,4 +13,9 @@ class Aircraft extends Model
     protected $fillable = [
         'aircraft_num','model','capacity','company'
     ];
+
+    public function flighttransactions()
+    {
+        return $this->hasMany('app\Models\Flighttransaction','aircraft_id');
+    }
 }
