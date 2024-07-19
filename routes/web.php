@@ -30,3 +30,4 @@ Route::get('/airCraft/update/{id}',[AircraftController::class,'edit'])->name('ai
 Route::post('/airCraft/updated/{id}',[AircraftController::class,'update'])->name('Update.airCraft');
 
 Route::get('/flightTransaction',[FlighttransactionController::class,'index'])->name('loadTransaction');
+Route::post('/flightTransaction/store',[FlighttransactionController::class,'store'])->name('storeTransaction');

@@ -10,6 +10,10 @@
         <div class="card-body">
             <form class="row g-3" method="post" action="{{ route('Update.Master',$flightMaster->id) }}">
                 @csrf
+                <div class="col-12">
+                    <label for="inputAddress" class="form-label" >Flight Master name</label>
+                    <input type="text" name="master_name" value="{{ $flightMaster->master_name }}" class="form-control border-secondary" id="inputAddress">
+                  </div>
                 <div class="col-6">
                     <label for="inputAddress" class="form-label" >Departure City</label>
                     <input type="text" name="departureCity" value="{{ $flightMaster->departureCity }}" class="form-control" id="inputAddress">

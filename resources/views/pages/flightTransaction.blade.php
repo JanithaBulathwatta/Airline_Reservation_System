@@ -33,10 +33,28 @@
                         @foreach ($passenger as $item)
                         <option value="">{{ $item->name }}</option>
                         @endforeach
-
-
                     </select>
                   </div>
+
+                <div class="col-md-6">
+                    <label for="inputCity" class="form-label">Flight Master</label>
+                    <select name="pasenger" class="form-control  border-secondary" >
+                        <option value="">select passenger</option>
+                        @foreach ($flightmaster as $item)
+                        <option value="">{{ $item->master_name }}</option>
+                        @endforeach
+                    </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="inputCity" class="form-label">Aircraft</label>
+                  <select name="pasenger" class="form-control  border-secondary" >
+                      <option value="">select Aircraft</option>
+                      @foreach ($aircraft as $item)
+                      <option value="">{{ $item->model }}</option>
+                      @endforeach
+                  </select>
+              </div>
 
 
                 <div class="col-12">
@@ -55,7 +73,9 @@
             <th>Seat Number</th>
             <th>Date</th>
             <th>Fare</th>
-
+            <th>Passenger</th>
+            <th>Flight Master</th>
+            <th>Aircraft</th>
             <th colspan="2">Action</th>
 
         </thead>

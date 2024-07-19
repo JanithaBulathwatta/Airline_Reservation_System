@@ -34,7 +34,8 @@ class FlighttransactionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Flighttransaction::create($request->all());
+        return redirect()->back();
     }
 
     /**

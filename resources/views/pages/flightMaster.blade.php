@@ -10,6 +10,11 @@
         <div class="card-body">
             <form class="row g-3" method="post" action="{{ route('storeflightMaster') }}">
                 @csrf
+                <div class="col-12">
+                    <label for="inputAddress" class="form-label" >Flight Master name</label>
+                    <input type="text" name="master_name" class="form-control border-secondary" id="inputAddress">
+                  </div>
+
                 <div class="col-6">
                     <label for="inputAddress" class="form-label" >Departure City</label>
                     <input type="text" name="departureCity" class="form-control border-secondary" id="inputAddress">
@@ -44,6 +49,7 @@
     <table class="table  text-center">
         <thead>
             <th>#</th>
+            <th>Master name</th>
             <th>Departure City</th>
             <th>Arrivel City</th>
             <th>Departure Time</th>
@@ -56,6 +62,7 @@
             <tr>
 
                     <td>{{ $loop->iteration }}</td>
+                    <td>{{ $item->master_name}}</td>
                     <td>{{ $item->departureCity }}</td>
                     <td>{{ $item->arrivalCity }}</td>
                     <td>{{ $item->departureTime }}</td>

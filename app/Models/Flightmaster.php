@@ -11,7 +11,7 @@ class Flightmaster extends Model
 
     protected $primarykey = 'id';
     protected $fillable = [
-        'departureCity','arrivalCity','departureTime','arrivalTime'
+        'departureCity','arrivalCity','departureTime','arrivalTime','master_name'
     ];
 
     public function flighttransactions(){
